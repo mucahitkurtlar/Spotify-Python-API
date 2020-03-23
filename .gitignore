@@ -2,3 +2,5 @@ authorization.py
 __pycache__
 auth-server
 .directory
+.*
+!/.gitignore

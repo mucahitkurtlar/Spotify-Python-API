@@ -1,0 +1,50 @@
+h3 {
+  color: #004d1b;
+  font-family: sans-serif;
+  font-size: 25px;
+  word-spacing: -3px;
+  text-align: center;
+  text-shadow: -0.2px 0 #003312, 0 1px #003312, 1px 0 #003312, 0 -1px #003312;
+}
+
+body {
+  background-color: #009933;
+}
+
+img {
+  margin: auto;
+}
+
+
+.img-box {
+  margin: auto;
+  width:256px;
+  height:256px;
+  border:0px;
+  background: url(spotify.png);
+}
+
+.login-button {
+  background-color: #1ed760;
+  border: 1px solid #003312;
+  color: #001a09;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.login-button {
+  border-radius: 3px;
+  margin: auto;
+  display:block;
+}
+
+.login-button {
+ transition-duration: 0.4s;
+}
+
+.login-button:hover {
+ background-color: #001a09; /* Green */
+ color: #1ed760;
+}

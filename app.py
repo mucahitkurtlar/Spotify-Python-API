@@ -1,10 +1,11 @@
 from flask import Flask, render_template, request, redirect
 import requests
 import json as json
-import base64
+from flask_bootstrap import Bootstrap
 from authorization import *
 
 app = Flask(__name__)
+Bootstrap(app)
 
 @app.route("/")
 def index():
@@ -47,6 +48,8 @@ def callback():
         }
     )
     response_json0 = response0.json()
+    print("")
+    print(response_json0)
     return render_template("callback.html", json_obj = response_json0)
 
 if __name__ == "__main__":

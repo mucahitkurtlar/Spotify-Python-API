@@ -39,7 +39,15 @@ def callback():
     print("---------------------------------------------")
     print(response_json)
 
-    return render_template("callback.html")
+    query0 = "https://api.spotify.com/v1/me"
+    response0 = requests.get(
+        query0,
+        headers = {
+            "Authorization": "Bearer {}".format(response_json["access_token"])
+        }
+    )
+    response_json0 = response0.json()
+    return render_template("callback.html", json_obj = response_json0)
 
 if __name__ == "__main__":
     app.run(debug = True)

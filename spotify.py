@@ -84,8 +84,20 @@ class Spotify:
         response_json = response.json()
         return response_json
 
+    def get_current_user_profile(self):
+        query = "https://api.spotify.com/v1/me"
+        response = requests.get(
+            query,
+            headers = {
+                "Authorization": "Bearer {}".format(spotify_auth_token)
+            }
+        )
+        response_json = response.json()
+        print(response_json["images"][0]["url"])
+
 
 if __name__ == "__main__":
     spotify = Spotify()
-    spotify.get_list_of_playlists()
+    #spotify.get_list_of_playlists()
     #spotify.add_track_to_playlist("Rammstein", "Küss mich (Fellfrosch)")
+    spotify.get_current_user_profile()

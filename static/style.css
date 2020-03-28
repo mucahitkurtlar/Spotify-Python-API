@@ -1,10 +1,21 @@
 h3 {
-  color: #004d1b;
+  color: white;
   font-family: sans-serif;
   font-size: 25px;
   word-spacing: -3px;
   text-align: center;
   text-shadow: -0.2px 0 #003312, 0 1px #003312, 1px 0 #003312, 0 -1px #003312;
+}
+
+h2 {
+  color: white;
+  text-transform: uppercase;
+}
+
+.table-box {
+  display: block;
+  width: 500px;
+  text-align: center;
 }
 
 body {
@@ -15,8 +26,26 @@ img {
   margin: auto;
 }
 
+td {
+  color: white;
+}
+
+th {
+  color: white;
+  text-transform: uppercase;
+}
+
+.image {
+  width: 300px;
+  height: 300px;
+  color: black;
+  border: 1px solid black;
+  position: relative;
+  float: right;
+}
 
 .img-box {
+  float: center;
   margin: auto;
   width:256px;
   height:256px;
@@ -26,25 +55,20 @@ img {
 
 .login-button {
   background-color: #1ed760;
-  border: 1px solid #003312;
-  color: #001a09;
+  border: 1px solid white;/*#003312*/
+  color: white;/*#001a09*/
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
-}
-
-.login-button {
   border-radius: 3px;
   margin: auto;
   display:block;
-}
-
-.login-button {
- transition-duration: 0.4s;
+  transition-duration: 0.4s;
 }
 
 .login-button:hover {
- background-color: #001a09; /* Green */
+ background-color: #001a09;
+ border: 1px solid #001a09;
  color: #1ed760;
 }

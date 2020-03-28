@@ -50,7 +50,29 @@ def callback():
     response_json0 = response0.json()
     print("")
     print(response_json0)
-    return render_template("callback.html", json_obj = response_json0)
+
+    query1 = "https://api.spotify.com/v1/me/playlists?limit=50"
+    response1 = requests.get(
+        query1,
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer {}".format(response_json["access_token"])
+        }
+    )
+    response_json1 = response1.json()
+    print(response.status_code)
+    #playlists = response_json["items"][]["name"]
+    playlists_items = []
+    for playlists in response_json1["items"]:
+        playlists_items.append(playlists)
+        #print(playlists)
+
+    playlists_names = []
+    for playlist in playlists_items:
+        playlists_names.append(playlist["name"])
+        print(playlist["name"])
+
+    return render_template("callback.html", json_obj = response_json0, liste = playlists_names)
 
 if __name__ == "__main__":
     app.run(debug = True)
